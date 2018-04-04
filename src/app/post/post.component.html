@@ -1,0 +1,9 @@
+<li [ngClass]="{'list-group-item':true,
+                'list-group-item-success': getStatus() === 'Positive',
+                'list-group-item-danger': getStatus() === 'Negative'}">
+  <h3>{{ title }}</h3>
+    <p>{{ content }}</p>
+    <button class="btn btn-success" (click)="increaseLoveIts()">I like</button>
+    <button class="btn btn-danger" (click)="decreaseLoveIts()">I don't like</button>
+    <h6>Status: {{ status }}     Likes: {{ loveIts }}</h6>
+</li>
